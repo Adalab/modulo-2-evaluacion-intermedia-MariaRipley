@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 .main {
   height: 100vh;
@@ -10,4 +11,22 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  background-color: lightseagreen;
+}
+
+.title {
+  color: gainsboro;
+}
+
+.infoText {
+  color: darkcyan;
+  font-size: 20px;
+}
+
+.subtitle {
+  color: lightpink;
+}
+
+.balance {
+  color: wheat;
 }
