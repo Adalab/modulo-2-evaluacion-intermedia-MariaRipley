@@ -45,3 +45,15 @@
   border: 1px solid darkcyan;
   box-shadow: 0.5;
 }
+
+.select {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+}
+
+.betInput {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+}
