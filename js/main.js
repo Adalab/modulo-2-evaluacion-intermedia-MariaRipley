@@ -20,14 +20,17 @@ const betInput = document.querySelector('.js__betInput');
 const btn = document.querySelector('.js__btn');
 const subtitle = document.querySelector('.js__subtitle');
 const remainBalance = document.querySelector('.js__remainBalance');
+const randomNumber = getRandomNumber(6);
+let balance = 50;
 
 
 function getRandomNumber(max) {
  return Math.ceil(Math.random() * max);
 }
 
-// getRandomNumber(6);
-console.log('El número afortunado es: ' + getRandomNumber(6));
+console.log('El número afortunado es: ' + randomNumber);
+
+
 
 function selectNumberValue(event) {
     const valueNumber = selectNumber.value;
@@ -41,10 +44,22 @@ function betAmountValue(event) {
 
 function handleClickBtn(event) {
     event.preventDefault();
-    // console.log('He hecho click');
     selectNumberValue();
     betAmountValue();
+    let userSelection = parseInt(selectNumber.value);
+    let userBet = parseInt(betInput.value);
+    if(userSelection === randomNumber) {
+        subtitle.innerHTML = '¡Has ganado el doble de lo apostado!';
+        balance = balance + userBet*2;
+        remainBalance.innerHTML = balance;
+    } else {
+        subtitle.innerHTML = 'Has perdido lo apostado';
+        balance = balance - userBet;
+        remainBalance.innerHTML = balance;
+    }
 }
+
+
 
 btn.addEventListener('click', handleClickBtn);
 
