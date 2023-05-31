@@ -21,3 +21,30 @@ const btn = document.querySelector('.js__btn');
 const subtitle = document.querySelector('.js__subtitle');
 const remainBalance = document.querySelector('.js__remainBalance');
 
+
+function getRandomNumber(max) {
+ return Math.ceil(Math.random() * max);
+}
+
+// getRandomNumber(6);
+console.log('El número afortunado es: ' + getRandomNumber(6));
+
+function selectNumberValue(event) {
+    const valueNumber = selectNumber.value;
+    console.log('El número elegido por la usuaria es: ' + valueNumber);
+}
+
+function betAmountValue(event) {
+    const betValue = betInput.value; 
+    console.log('La cantidad apostada es: ' + betValue);
+}
+
+function handleClickBtn(event) {
+    event.preventDefault();
+    // console.log('He hecho click');
+    selectNumberValue();
+    betAmountValue();
+}
+
+btn.addEventListener('click', handleClickBtn);
+
