@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <main>
+      <h1>Dados y Apuestas</h1>
+      <p>Introduce aquí tu jugada:</p>
+      <form action="#">
+        <select name="betNumber" id="betNumber">
+          <option value="" disabled selected hidden>
+            Qué número apuestas del 1 al 6
+          </option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+        <input type="number" placeholder="¿Cuánto apuestas?" />
+        <input type="submit" value="Jugar" />
+      </form>
+      <h2>¡Vamos a Jugar!</h2>
+      <p>Saldo: <span>50</span></p>
+    </main>
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
