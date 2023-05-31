@@ -30,3 +30,18 @@
 .balance {
   color: wheat;
 }
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: lightcoral;
+  color: wheat;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid darkcyan;
+  box-shadow: 0.5;
+}

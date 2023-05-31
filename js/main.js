@@ -22,6 +22,7 @@ const subtitle = document.querySelector('.js__subtitle');
 const remainBalance = document.querySelector('.js__remainBalance');
 const randomNumber = getRandomNumber(6);
 let balance = 50;
+const newGameBtn = document.querySelector('.js__newGameBtn');
 
 
 function getRandomNumber(max) {
@@ -44,6 +45,7 @@ function handleClickBtn(event) {
     event.preventDefault();
     selectNumberValue();
     betAmountValue();
+    
     let userSelection = parseInt(selectNumber.value);
     let userBet = parseInt(betInput.value);
     if(userSelection === randomNumber) {
@@ -57,6 +59,13 @@ function handleClickBtn(event) {
     }
 }
 
+function finishGame(event) {
+    if(remainBalance.innerHTML >= 200) {
+        newGameBtn.classList.remove('hidden');
+    }
+}
+
+finishGame();
 
 
 btn.addEventListener('click', handleClickBtn);
