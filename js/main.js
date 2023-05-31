@@ -34,12 +34,10 @@ console.log('El número afortunado es: ' + randomNumber);
 
 function selectNumberValue(event) {
     const valueNumber = selectNumber.value;
-    console.log('El número elegido por la usuaria es: ' + valueNumber);
 }
 
 function betAmountValue(event) {
     const betValue = betInput.value; 
-    console.log('La cantidad apostada es: ' + betValue);
 }
 
 function handleClickBtn(event) {
@@ -49,11 +47,11 @@ function handleClickBtn(event) {
     let userSelection = parseInt(selectNumber.value);
     let userBet = parseInt(betInput.value);
     if(userSelection === randomNumber) {
-        subtitle.innerHTML = '¡Has ganado el doble de lo apostado!';
+        subtitle.innerHTML = '¡Has ganado el doble de lo apostado! 😄';
         balance = balance + userBet*2;
         remainBalance.innerHTML = balance;
     } else {
-        subtitle.innerHTML = 'Has perdido lo apostado';
+        subtitle.innerHTML = 'Has perdido lo apostado 😔';
         balance = balance - userBet;
         remainBalance.innerHTML = balance;
     }
