@@ -23,6 +23,10 @@ function betAmountValue(event) {
     return betValue;
 }
 
+function setSubtitle(text) {
+    subtitle.innerHTML = text;
+}
+
 function handleClickBtn(event) {
     event.preventDefault();
     getRandomNumber();
@@ -34,13 +38,15 @@ function handleClickBtn(event) {
     let userSelection = parseInt(selectNumber.value);
     let userBet = parseInt(betInput.value);
     if(userSelection === randomNumber) {
-        subtitle.innerHTML = '¡Has ganado el doble de lo apostado! 😄';
+        setSubtitle('¡Has ganado el doble de lo apostado! 😄')
         balance = balance + userBet*2;
         remainBalance.innerHTML = balance;
-    } else {
-        subtitle.innerHTML = 'Has perdido lo apostado 😔';
+    } else if (userSelection > 0 && userSelection < 7) {
+        setSubtitle('Has perdido lo apostado 😔');
         balance = balance - userBet;
         remainBalance.innerHTML = balance;
+    } else {
+        setSubtitle('Selecciona un número de la lista');
     }
 }
 
